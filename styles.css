@@ -2890,3 +2890,73 @@ button, a { -webkit-tap-highlight-color: transparent; }
     font-size: 25px !important;
   }
 }
+
+
+/* Final requested touch-ups: move avatar left to uncover PORT and add the intro below. */
+.hero-redesign .hero-avatar-button {
+  transform: translateX(calc(-50% - 64px)) !important;
+}
+.hero-redesign .hero-tagline {
+  width: min(100%, 900px);
+  margin: 7px auto 18px;
+  padding: 0 18px;
+  text-align: center;
+  position: relative;
+  z-index: 6;
+}
+.hero-redesign .hero-tagline-role {
+  margin: 0 0 7px;
+  color: #907c69;
+  font-family: var(--font-body);
+  font-size: clamp(10px, 1vw, 13px);
+  font-weight: 700;
+  letter-spacing: .045em;
+}
+.hero-redesign .hero-tagline-quote {
+  max-width: 780px;
+  margin: 0 auto;
+  color: #4c433b;
+  font-family: var(--font-display);
+  font-size: clamp(13px, 1.35vw, 17px);
+  font-weight: 500;
+  line-height: 1.55;
+  letter-spacing: -.015em;
+}
+@media (max-width: 900px) {
+  .hero-redesign .hero-avatar-button {
+    transform: translateX(calc(-50% - 42px)) !important;
+  }
+  .hero-redesign .hero-tagline {
+    margin-top: 5px;
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 650px) {
+  .hero-redesign .hero-avatar-button {
+    transform: translateX(calc(-50% - 22px)) !important;
+  }
+  .hero-redesign .hero-tagline {
+    margin: 8px auto 15px;
+    padding: 0 6px;
+  }
+  .hero-redesign .hero-tagline-role {
+    font-size: 9px;
+    line-height: 1.5;
+    letter-spacing: .015em;
+  }
+  .hero-redesign .hero-tagline-quote {
+    font-size: 12px;
+    line-height: 1.55;
+  }
+}
+@media (max-width: 390px) {
+  .hero-redesign .hero-avatar-button {
+    transform: translateX(calc(-50% - 16px)) !important;
+  }
+  .hero-redesign .hero-tagline-role {
+    font-size: 8px;
+  }
+  .hero-redesign .hero-tagline-quote {
+    font-size: 11px;
+  }
+}
