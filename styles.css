@@ -2587,3 +2587,47 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .hero-redesign .hero-side-word { font-size: clamp(26px, 6.9vw, 30px); }
   .hero-redesign .hero-avatar-button { width: 100%; }
 }
+
+
+/* Fine alignment: bring the title closer and visually center the avatar group. */
+.hero-redesign .hero-art {
+  width: min(100%, 920px);
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 320px) minmax(0, 1fr);
+  column-gap: 0;
+  justify-content: center;
+}
+.hero-redesign .hero-side-word {
+  font-size: clamp(58px, 7.4vw, 96px);
+}
+.hero-redesign .hero-avatar-button {
+  width: min(100%, 320px);
+  transform: translateX(18px) !important;
+}
+@media (max-width: 900px) {
+  .hero-redesign .hero-art {
+    width: min(100%, 820px);
+    grid-template-columns: minmax(0, 1fr) minmax(230px, 270px) minmax(0, 1fr);
+    column-gap: 0;
+  }
+  .hero-redesign .hero-side-word {
+    font-size: clamp(46px, 7vw, 72px);
+  }
+  .hero-redesign .hero-avatar-button {
+    width: 100%;
+    transform: translateX(10px) !important;
+  }
+}
+@media (max-width: 650px) {
+  .hero-redesign .hero-art {
+    width: 100%;
+    grid-template-columns: minmax(0, .95fr) minmax(135px, 1.1fr) minmax(0, .95fr);
+    column-gap: 0;
+  }
+  .hero-redesign .hero-side-word {
+    font-size: clamp(29px, 7.1vw, 45px);
+  }
+  .hero-redesign .hero-avatar-button {
+    width: 100%;
+    transform: none !important;
+  }
+}
