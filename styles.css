@@ -3340,3 +3340,12 @@ button, a { -webkit-tap-highlight-color: transparent; }
     transform: translateX(calc(-50% + 45px)) !important;
   }
 }
+
+
+/* Desktop hero: enlarge the avatar and keep it slightly left of the center line. */
+@media (min-width: 901px) {
+  .hero-redesign .hero-avatar-button {
+    width: clamp(260px, 24vw, 310px) !important;
+    transform: translateX(calc(-50% + 25px)) !important;
+  }
+}
