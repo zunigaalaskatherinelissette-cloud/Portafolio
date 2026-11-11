@@ -3275,3 +3275,16 @@ button, a { -webkit-tap-highlight-color: transparent; }
     padding-bottom: 26px !important;
   }
 }
+
+
+/* Bring FOLIO closer to the avatar without changing the mobile stacked layout. */
+@media (min-width: 901px) {
+  .hero-redesign .hero-word-right {
+    right: 13% !important;
+  }
+}
+@media (min-width: 651px) and (max-width: 900px) {
+  .hero-redesign .hero-word-right {
+    right: 10% !important;
+  }
+}
