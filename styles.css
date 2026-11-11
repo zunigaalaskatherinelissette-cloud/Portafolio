@@ -1414,3 +1414,70 @@ img, video, svg, canvas {
     font-size: 10.5px;
   }
 }
+
+
+/* Project Stories: make project descriptions and case-study text comfortably readable. */
+.project-kind {
+  font-size: 9px;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+.project-summary {
+  font-size: 13px;
+  line-height: 1.75;
+  min-height: 68px;
+}
+.project-link {
+  font-size: 11px;
+  padding: 10px 15px;
+}
+.case-heading > p:last-child {
+  font-size: 13px;
+  line-height: 1.7;
+}
+.case-top > span {
+  font-size: 10px;
+  line-height: 1.5;
+}
+.case-description {
+  font-size: 14px;
+  line-height: 1.8;
+}
+.detail-label {
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: .8px;
+}
+.case-detail p {
+  font-size: 13px;
+  line-height: 1.75;
+}
+.case-action {
+  font-size: 11px;
+}
+.tech-note {
+  font-size: 12px;
+  line-height: 1.7;
+}
+@media (max-width: 650px) {
+  .project-kind { font-size: 10px; }
+  .project-summary {
+    font-size: 13px;
+    line-height: 1.75;
+    min-height: 0;
+  }
+  .project-link { font-size: 11px; }
+  .case-heading > p:last-child { font-size: 12px; }
+  .case-top > span { font-size: 10px; }
+  .case-description {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  .detail-label { font-size: 9px; }
+  .case-detail p {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+  .case-action { font-size: 10px; }
+  .tech-note { font-size: 12px; }
+}
