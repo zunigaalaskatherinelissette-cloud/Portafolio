@@ -2960,3 +2960,32 @@ button, a { -webkit-tap-highlight-color: transparent; }
     font-size: 11px;
   }
 }
+
+
+/* Avatar correction: noticeably smaller and shifted RIGHT to keep PORT readable. */
+.hero-redesign .hero-avatar-button {
+  width: clamp(260px, 25vw, 320px) !important;
+  height: 84% !important;
+  transform: translateX(calc(-50% + 118px)) !important;
+}
+@media (max-width: 900px) {
+  .hero-redesign .hero-avatar-button {
+    width: min(31vw, 275px) !important;
+    height: 84% !important;
+    transform: translateX(calc(-50% + 72px)) !important;
+  }
+}
+@media (max-width: 650px) {
+  .hero-redesign .hero-avatar-button {
+    width: min(54vw, 205px) !important;
+    height: 80% !important;
+    transform: translateX(calc(-50% + 20px)) !important;
+  }
+}
+@media (max-width: 390px) {
+  .hero-redesign .hero-avatar-button {
+    width: min(52vw, 185px) !important;
+    height: 78% !important;
+    transform: translateX(calc(-50% + 14px)) !important;
+  }
+}
