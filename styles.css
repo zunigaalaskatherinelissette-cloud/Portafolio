@@ -1308,3 +1308,109 @@ img, video, svg, canvas {
     font-size: clamp(34px, 10vw, 39px);
   }
 }
+
+
+/* Mobile readability polish: clearer type and comfortable, subtle spacing. */
+@media (max-width: 650px) {
+  body {
+    font-size: 14px;
+    line-height: 1.7;
+    -webkit-text-size-adjust: 100%;
+  }
+  .hero-kicker,
+  .eyebrow,
+  .project-kind,
+  .team-tag,
+  .demo-duration {
+    font-size: 10px;
+    line-height: 1.5;
+    letter-spacing: 1.1px;
+  }
+  .hero-name,
+  .hero-bottomline,
+  .scroll-link {
+    font-size: 10px;
+    line-height: 1.55;
+    letter-spacing: .25px;
+  }
+  .intro-copy,
+  .project-summary,
+  .section-aside,
+  .case-heading > p:last-child,
+  .case-columns p,
+  .tech-note,
+  .contact-copy,
+  .closing-quote {
+    font-size: 13px;
+    line-height: 1.75;
+  }
+  .intro-subtitle {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  .quick-link,
+  .clean-list li,
+  .case-demo figcaption,
+  .certificate-preview small,
+  .certificate-preview em,
+  .mos-certificate-card small,
+  .mos-certificate-card em {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+  .intro-chips span,
+  .index-labels,
+  .project-link,
+  .live-link {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+  .section-heading {
+    margin-bottom: 28px;
+  }
+  .project-grid,
+  .skills-grid,
+  .timeline-grid {
+    gap: 16px;
+  }
+  .project-card,
+  .timeline-card,
+  .skill-panel,
+  .info-panel {
+    padding: 16px;
+  }
+  .case-card {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+  .intro-section {
+    gap: 30px;
+  }
+  .intro-chips {
+    gap: 9px;
+    margin-top: 16px;
+  }
+  .quick-link {
+    margin-bottom: 12px;
+  }
+  .contact-links {
+    gap: 16px;
+  }
+}
+@media (max-width: 380px) {
+  body { font-size: 13.5px; }
+  .intro-copy,
+  .project-summary,
+  .section-aside,
+  .case-columns p,
+  .tech-note,
+  .contact-copy,
+  .closing-quote {
+    font-size: 12.5px;
+  }
+  .quick-link,
+  .clean-list li,
+  .case-demo figcaption {
+    font-size: 10.5px;
+  }
+}
