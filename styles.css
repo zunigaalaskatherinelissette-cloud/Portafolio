@@ -1594,3 +1594,31 @@ img, video, svg, canvas {
 .language-toggle:focus-visible{outline:3px solid rgba(86,67,162,.3);outline-offset:3px}
 .language-toggle:disabled{cursor:not-allowed;opacity:.55}
 @media(max-width:650px){.site-header{gap:10px}.language-toggle{min-width:39px;height:34px;padding:0 9px}}
+
+
+/* Language switcher: keep it visible in desktop and mobile headers */
+.site-header > .language-toggle {
+  display: inline-flex !important;
+  flex: 0 0 44px !important;
+  width: 44px !important;
+  min-width: 44px !important;
+  height: 36px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  z-index: 100 !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  margin: 0 10px 0 auto !important;
+  padding: 0 !important;
+  border: 1px solid #e6e1dc !important;
+  border-radius: 22px !important;
+  background: #fff !important;
+  color: #5643a2 !important;
+  cursor: pointer !important;
+  font: 800 11px "DM Sans", Arial, sans-serif !important;
+}
+.site-header > .header-mark { flex: 0 0 34px !important; margin-left: 0 !important; }
+@media (max-width: 650px) {
+  .site-header > .language-toggle { flex-basis: 40px !important; width: 40px !important; min-width: 40px !important; height: 34px !important; margin-right: 9px !important; }
+}
