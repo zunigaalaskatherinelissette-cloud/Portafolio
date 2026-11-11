@@ -1,20 +1,11 @@
 "use strict";
 (async () => {
-  const header = document.querySelector(".site-header");
-  if (!header) return;
-  const button = document.createElement("button");
-  button.type = "button";
-  button.className = "language-toggle";
-  button.textContent = "ES";
-  button.setAttribute("aria-label", "Cambiar idioma a español");
-  button.setAttribute("title", "Español");
-  button.setAttribute("aria-pressed", "false");
-  const headerMark = header.querySelector(".header-mark");
-  header.insertBefore(button, headerMark || null);
+  const button = document.getElementById("language-toggle");
+  if (!button) return;
 
   let translations;
   try {
-    const response = await fetch("./translations.json", { cache: "no-cache" });
+    const response = await fetch("./translations.json?v=2", { cache: "no-store" });
     if (!response.ok) throw new Error("No se pudo cargar translations.json");
     translations = await response.json();
   } catch (error) {
