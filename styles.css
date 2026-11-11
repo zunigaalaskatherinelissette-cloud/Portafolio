@@ -1552,3 +1552,16 @@ img, video, svg, canvas {
 @media (prefers-reduced-motion: reduce) {
   .experience-card { transition:none; }
 }
+
+
+/* Curriculum Vitae link — coordinated with the portfolio's sand and purple palette. */
+.cv-button {
+  display: inline-flex; align-items: center; gap: 13px; margin-top: 19px;
+  padding: 11px 17px; border: 1px solid var(--purple); border-radius: 28px;
+  color: var(--purple); background: #fff; font-size: 10px; font-weight: 800;
+  letter-spacing: .35px; transition: color .2s ease, background .2s ease, transform .2s ease;
+}
+.cv-button span { font-size: 15px; }
+.cv-button:hover { color: #fff; background: var(--purple); transform: translateY(-2px); }
+.cv-button:focus-visible { outline: 3px solid rgba(86,67,162,.25); outline-offset: 3px; }
+@media (max-width: 650px) { .cv-button { margin-top: 16px; } }
