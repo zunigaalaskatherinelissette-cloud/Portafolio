@@ -3324,3 +3324,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
     animation: dollHello .85s ease-in-out !important;
   }
 }
+
+
+/* Tiny optical adjustment: nudge the centered mobile avatar slightly left. */
+@media (max-width: 650px) {
+  .hero-redesign .hero-avatar-button {
+    transform: translateX(-8px) !important;
+  }
+}
