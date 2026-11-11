@@ -115,6 +115,7 @@ document.querySelectorAll("[data-skill-card]").forEach((card) => {
     "Experience": "Experiencia",
     "Skills": "Habilidades",
     "Contact": "Contacto",
+    "View my CV": "Ver mi CV",
     "01 / WELCOME TO MY PORTFOLIO": "01 / BIENVENIDOS A MI PORTAFOLIO",
     "High school student · Aspiring medical professional · Technology enthusiast": "Estudiante de bachillerato · Futura profesional de la medicina · Entusiasta de la tecnología",
     "“I learn with curiosity, create with purpose, and turn ideas into solutions that can help others.”": "«Aprendo con curiosidad, creo con propósito y convierto ideas en soluciones que pueden ayudar a los demás».",
