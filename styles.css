@@ -2989,3 +2989,215 @@ button, a { -webkit-tap-highlight-color: transparent; }
     transform: translateX(calc(-50% + 14px)) !important;
   }
 }
+
+
+/* Compact desktop hero: lift the avatar and FOLIO so the complete cover fits one screen. */
+.hero-redesign {
+  min-height: 0 !important;
+  padding: 18px 6% 10px !important;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.hero-redesign .hero-intro-row {
+  flex: 0 0 auto;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.hero-redesign .hero-intro-copy .eyebrow {
+  margin: 0 0 4px !important;
+  font-size: 9px;
+}
+.hero-redesign .hero-art {
+  flex: 0 0 auto;
+  width: min(100%, 1320px) !important;
+  height: clamp(330px, 44vh, 420px) !important;
+  min-height: 330px !important;
+  max-height: 420px !important;
+  margin: 0 auto !important;
+}
+.hero-redesign .hero-word-left {
+  top: 18% !important;
+}
+.hero-redesign .hero-word-right {
+  bottom: 13% !important;
+}
+.hero-redesign .hero-avatar-button {
+  bottom: 30px !important;
+  height: 88% !important;
+  width: clamp(250px, 24vw, 305px) !important;
+  transform: translateX(calc(-50% + 118px)) !important;
+}
+.hero-redesign .hero-year {
+  top: 8% !important;
+}
+.hero-redesign .hero-tagline {
+  margin: 2px auto 8px !important;
+}
+.hero-redesign .hero-tagline-role {
+  margin-bottom: 5px !important;
+}
+.hero-redesign .hero-tagline-quote {
+  font-size: clamp(12px, 1.2vw, 15px) !important;
+}
+.hero-redesign .hero-bottomline {
+  padding-top: 3px !important;
+  font-size: 9px !important;
+}
+
+@media (min-width: 651px) and (max-width: 900px) {
+  .hero-redesign {
+    padding: 16px 4% 10px !important;
+  }
+  .hero-redesign .hero-art {
+    height: clamp(340px, 47vh, 400px) !important;
+    min-height: 340px !important;
+  }
+  .hero-redesign .hero-word-left {
+    top: 20% !important;
+  }
+  .hero-redesign .hero-word-right {
+    bottom: 13% !important;
+  }
+  .hero-redesign .hero-avatar-button {
+    bottom: 25px !important;
+    height: 86% !important;
+    width: min(31vw, 260px) !important;
+    transform: translateX(calc(-50% + 72px)) !important;
+  }
+  .hero-redesign .hero-tagline {
+    margin: 2px auto 8px !important;
+  }
+}
+
+/* Phone layout: read PORT then FOLIO first, with the avatar clearly below. */
+@media (max-width: 650px) {
+  .hero-redesign {
+    display: flex !important;
+    min-height: 0 !important;
+    padding: 18px 5% 14px !important;
+  }
+  .hero-redesign .hero-art {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto clamp(220px, 64vw, 270px) auto;
+    align-items: center;
+    justify-items: center;
+    gap: 0;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    margin: 4px auto 8px !important;
+    padding: 0 4px;
+    overflow: visible !important;
+  }
+  .hero-redesign .hero-side-word {
+    position: relative !important;
+    inset: auto !important;
+    display: block !important;
+    justify-self: center;
+    width: max-content;
+    max-width: 100% !important;
+    font-size: clamp(46px, 12vw, 60px) !important;
+    line-height: .88 !important;
+    letter-spacing: -.11em !important;
+    text-align: center !important;
+    white-space: nowrap;
+  }
+  .hero-redesign .hero-word-left {
+    grid-column: 1;
+    grid-row: 1;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    margin: 5px auto 2px;
+    transform: rotate(-5deg) !important;
+  }
+  .hero-redesign .hero-word-left::before {
+    top: -.4em;
+    left: .02em;
+    font-size: .32em;
+  }
+  .hero-redesign .hero-word-right {
+    grid-column: 1;
+    grid-row: 2;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    margin: 0 auto 7px;
+    font-size: clamp(45px, 11.6vw, 58px) !important;
+    transform: rotate(-5deg) !important;
+  }
+  .hero-redesign .hero-avatar-button {
+    position: relative !important;
+    grid-column: 1;
+    grid-row: 3;
+    justify-self: center;
+    align-self: end;
+    inset: auto !important;
+    width: min(210px, 58vw) !important;
+    height: 100% !important;
+    margin: 0 auto !important;
+    transform: none !important;
+  }
+  .hero-redesign .hero-avatar {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: center bottom !important;
+  }
+  .hero-redesign .hero-year {
+    top: 8px !important;
+    right: 7px !important;
+    font-size: 27px !important;
+  }
+  .hero-redesign .hero-name {
+    position: relative !important;
+    grid-column: 1;
+    grid-row: 4;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    margin: 4px auto 0 !important;
+    font-size: 7px !important;
+    line-height: 1.35;
+    text-align: center;
+  }
+  .hero-redesign .hero-tagline {
+    width: 100%;
+    margin: 8px auto 13px !important;
+    padding: 0 4px;
+  }
+  .hero-redesign .hero-tagline-role {
+    font-size: 9px !important;
+    line-height: 1.5;
+  }
+  .hero-redesign .hero-tagline-quote {
+    font-size: 12px !important;
+    line-height: 1.5;
+  }
+  .hero-redesign .hero-bottomline {
+    justify-content: space-between;
+    gap: 8px;
+    text-align: left;
+    padding-top: 8px !important;
+  }
+}
+@media (max-width: 390px) {
+  .hero-redesign .hero-art {
+    grid-template-rows: auto auto 225px auto;
+  }
+  .hero-redesign .hero-side-word {
+    font-size: 45px !important;
+  }
+  .hero-redesign .hero-word-right {
+    font-size: 43px !important;
+  }
+  .hero-redesign .hero-avatar-button {
+    width: min(190px, 58vw) !important;
+  }
+}
