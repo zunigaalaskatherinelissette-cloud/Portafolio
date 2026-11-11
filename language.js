@@ -23,6 +23,8 @@
     return;
   }
 
+  const normalizedTranslations = Object.fromEntries(Object.entries(translations).map(([key, value]) => [key.trim(), value]));
+
   const textNodes = [];
   const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
     acceptNode(node) {
@@ -42,7 +44,7 @@
 
   const translate = (value, language) => {
     if (language !== "es") return value;
-    const translated = translations[value.trim()];
+    const translated = normalizedTranslations[value.trim()];
     if (!translated) return value;
     const leading = value.match(/^\\s*/)?.[0] || "";
     const trailing = value.match(/\\s*$/)?.[0] || "";
