@@ -3308,3 +3308,16 @@ button, a { -webkit-tap-highlight-color: transparent; }
     transform: translateX(10px) !important;
   }
 }
+
+
+/* Portrait phones: shift the avatar slightly left of center for better balance. */
+@media (max-width: 650px) {
+  .hero-redesign .hero-avatar-button {
+    transform: translateX(-8px) !important;
+  }
+}
+@media (max-width: 390px) {
+  .hero-redesign .hero-avatar-button {
+    transform: translateX(-12px) !important;
+  }
+}
