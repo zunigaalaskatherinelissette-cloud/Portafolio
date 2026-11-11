@@ -136,7 +136,8 @@ document.querySelectorAll("[data-skill-card]").forEach((card) => {
     "LinkedIn profile": "Perfil de LinkedIn",
     "GitHub profile": "Perfil de GitHub",
     "Contact & links": "Contacto y enlaces",
-    "FIVE SECTIONS · ONE STORY": "CINCO SECCIONES · UNA HISTORIA",
+    "SIX SECTIONS · ONE STORY": "SEIS SECCIONES · UNA HISTORIA",
+    "EXPERIENCE": "EXPERIENCIA",
     "HOME": "INICIO",
     "ABOUT ME": "SOBRE MÍ",
     "PROJECTS": "PROYECTOS",
@@ -289,7 +290,7 @@ document.querySelectorAll("[data-skill-card]").forEach((card) => {
     textNodes.forEach((node) => {
       const original = originalText.get(node);
       const trimmed = original.trim();
-      const translated = translations[trimmed];
+      const translated = Object.entries(translations).find(([key]) => key.trim() === trimmed)?.[1];
       if (spanish && translated) {
         const leading = original.match(/^\\s*/)?.[0] || "";
         const trailing = original.match(/\\s*$/)?.[0] || "";
