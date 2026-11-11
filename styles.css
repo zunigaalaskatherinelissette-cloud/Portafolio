@@ -2237,3 +2237,86 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .case-number { font-size: 21px; }
   .project-link, .case-action { max-width: 100%; white-space: normal; }
 }
+
+
+/* Portfolio cover: separate title, centered avatar, and lower title into clear bands. */
+.hero-redesign .hero-art {
+  height: clamp(430px, 55vh, 540px);
+  min-height: 430px;
+  max-height: 540px;
+  overflow: hidden;
+}
+.hero-redesign .hero-word {
+  z-index: 1;
+}
+.hero-redesign .hero-word .word-top,
+.hero-redesign .hero-word .word-bottom {
+  left: 50%;
+  right: auto;
+  width: max-content;
+  max-width: 100%;
+  font-size: clamp(88px, 13.5vw, 172px);
+  line-height: .82;
+  letter-spacing: -.09em;
+  transform: translateX(-50%) rotate(-3deg);
+}
+.hero-redesign .hero-word .word-top {
+  top: 1%;
+}
+.hero-redesign .hero-word .word-bottom {
+  bottom: 1%;
+  transform: translateX(-50%) rotate(-2deg);
+}
+.hero-redesign .hero-avatar-button {
+  z-index: 2;
+  left: 50%;
+  bottom: 15%;
+  width: clamp(225px, 27vw, 325px);
+  height: 68%;
+  transform: translateX(-50%);
+}
+.hero-redesign .hero-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+}
+.hero-redesign .hero-name { z-index: 3; bottom: 8%; }
+.hero-redesign .hero-avatar-hint { z-index: 4; bottom: 8%; }
+@media (max-width: 900px) {
+  .hero-redesign .hero-art { height: 420px; min-height: 420px; }
+  .hero-redesign .hero-word .word-top,
+  .hero-redesign .hero-word .word-bottom {
+    font-size: clamp(82px, 14vw, 132px);
+  }
+  .hero-redesign .hero-avatar-button { width: 260px; height: 67%; bottom: 15%; }
+}
+@media (max-width: 650px) {
+  .hero-redesign { min-height: 0; }
+  .hero-redesign .hero-art {
+    height: clamp(330px, 88vw, 390px);
+    min-height: 330px;
+    margin: 8px auto 12px;
+    overflow: hidden;
+  }
+  .hero-redesign .hero-word .word-top,
+  .hero-redesign .hero-word .word-bottom {
+    font-size: clamp(57px, 16vw, 78px);
+    letter-spacing: -.095em;
+  }
+  .hero-redesign .hero-word .word-top { top: 2%; }
+  .hero-redesign .hero-word .word-bottom { bottom: 2%; }
+  .hero-redesign .hero-avatar-button {
+    width: min(215px, 56vw);
+    height: 65%;
+    bottom: 16%;
+  }
+  .hero-redesign .hero-name { bottom: 7%; font-size: 6px; }
+  .hero-redesign .hero-avatar-hint { display: none; }
+}
+@media (max-width: 390px) {
+  .hero-redesign .hero-art { height: 315px; min-height: 315px; }
+  .hero-redesign .hero-word .word-top,
+  .hero-redesign .hero-word .word-bottom { font-size: clamp(50px, 15.5vw, 62px); }
+  .hero-redesign .hero-avatar-button { width: min(185px, 55vw); }
+}
