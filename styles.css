@@ -1794,3 +1794,15 @@ img, video, svg, canvas {
   .hero-redesign .hero-word .word-top,
   .hero-redesign .hero-word .word-bottom { font-size: clamp(70px, 18vw, 88px); }
 }
+
+
+/* Keep the desktop navigation precisely centered in the header. */
+@media (min-width: 651px) {
+  .site-header > .nav {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+  }
+}
