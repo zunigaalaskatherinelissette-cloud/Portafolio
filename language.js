@@ -37,8 +37,8 @@
     if (language !== "es") return value;
     const translated = normalizedTranslations[value.trim()];
     if (!translated) return value;
-    const leading = value.match(/^\\s*/)?.[0] || "";
-    const trailing = value.match(/\\s*$/)?.[0] || "";
+    const leading = value.match(/^\s*/)?.[0] || "";
+    const trailing = value.match(/\s*$/)?.[0] || "";
     return leading + translated + trailing;
   };
 
