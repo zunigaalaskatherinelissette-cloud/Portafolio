@@ -3321,3 +3321,21 @@ button, a { -webkit-tap-highlight-color: transparent; }
     transform: translateX(-12px) !important;
   }
 }
+
+
+/* Keep the avatar truly centered throughout the phone layout, including 630px and below. */
+@media (max-width: 650px) {
+  .hero-redesign .hero-avatar-button {
+    justify-self: center !important;
+    left: auto !important;
+    right: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    transform: none !important;
+  }
+  .hero-redesign .hero-avatar {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
