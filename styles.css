@@ -1586,3 +1586,11 @@ img, video, svg, canvas {
 @media(max-width:850px){.certifications-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.certifications-section{padding:36px 0 42px}.certifications-grid{grid-template-columns:minmax(0,1fr);gap:13px}.portfolio-cert-card{padding:19px 18px}.cert-description{min-height:0}}
 @media(prefers-reduced-motion:reduce){.portfolio-cert-card{transition:none}}
+
+
+/* Accessible English / Spanish language switcher. */
+.language-toggle{flex:0 0 auto;min-width:44px;height:36px;padding:0 12px;border:1px solid #e6e1dc;border-radius:22px;background:#fff;color:#5643a2;cursor:pointer;font:800 11px "DM Sans",Arial,sans-serif;letter-spacing:.6px;transition:background .2s ease,transform .2s ease}
+.language-toggle:hover{background:#eee9fb;transform:translateY(-1px)}
+.language-toggle:focus-visible{outline:3px solid rgba(86,67,162,.3);outline-offset:3px}
+.language-toggle:disabled{cursor:not-allowed;opacity:.55}
+@media(max-width:650px){.site-header{gap:10px}.language-toggle{min-width:39px;height:34px;padding:0 9px}}
