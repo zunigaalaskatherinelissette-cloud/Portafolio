@@ -1982,3 +1982,57 @@ img, video, svg, canvas {
   .hero-redesign .hero-word .word-bottom { font-size: clamp(66px, 18vw, 82px); }
   .hero-redesign .hero-avatar-button { width: min(195px, 58vw); }
 }
+
+
+/* Final hero alignment: keep every title letter visible with the avatar centered behind it. */
+.hero-redesign .hero-word {
+  z-index: 4;
+  pointer-events: none;
+}
+.hero-redesign .hero-word .word-top,
+.hero-redesign .hero-word .word-bottom {
+  left: 50%;
+  right: auto;
+  width: max-content;
+  max-width: 100%;
+  font-size: clamp(100px, 15.5vw, 190px);
+  transform: translateX(-50%) rotate(-3deg);
+  letter-spacing: -.105em;
+}
+.hero-redesign .hero-word .word-top {
+  top: 12%;
+}
+.hero-redesign .hero-word .word-bottom {
+  bottom: 12%;
+  transform: translateX(-50%) rotate(-2deg);
+}
+.hero-redesign .hero-avatar-button {
+  z-index: 2;
+}
+.hero-redesign .hero-name {
+  z-index: 5;
+}
+.hero-redesign .hero-avatar-hint {
+  z-index: 6;
+}
+@media (max-width: 900px) {
+  .hero-redesign .hero-word .word-top,
+  .hero-redesign .hero-word .word-bottom {
+    font-size: clamp(86px, 15.5vw, 140px);
+  }
+}
+@media (max-width: 650px) {
+  .hero-redesign .hero-word .word-top,
+  .hero-redesign .hero-word .word-bottom {
+    font-size: clamp(58px, 16.5vw, 88px);
+    letter-spacing: -.11em;
+  }
+  .hero-redesign .hero-word .word-top { top: 17%; }
+  .hero-redesign .hero-word .word-bottom { bottom: 15%; }
+}
+@media (max-width: 380px) {
+  .hero-redesign .hero-word .word-top,
+  .hero-redesign .hero-word .word-bottom {
+    font-size: clamp(52px, 16vw, 68px);
+  }
+}
