@@ -3288,3 +3288,23 @@ button, a { -webkit-tap-highlight-color: transparent; }
     right: 10% !important;
   }
 }
+
+
+/* Mobile centering: keep the avatar visually centered on narrow phone screens. */
+@media (max-width: 650px) {
+  .hero-redesign .hero-avatar-button {
+    justify-self: center !important;
+    margin-inline: auto !important;
+    transform: translateX(14px) !important;
+  }
+  .hero-redesign .hero-avatar {
+    display: block !important;
+    margin-inline: auto !important;
+    object-position: center bottom !important;
+  }
+}
+@media (max-width: 390px) {
+  .hero-redesign .hero-avatar-button {
+    transform: translateX(10px) !important;
+  }
+}
