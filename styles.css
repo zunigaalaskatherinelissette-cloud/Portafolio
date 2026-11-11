@@ -2631,3 +2631,55 @@ button, a { -webkit-tap-highlight-color: transparent; }
     transform: none !important;
   }
 }
+
+
+/* Corrected hero composition: smaller avatar shifted right, with its white canvas blended away. */
+.hero-redesign .hero-art {
+  width: min(100%, 920px);
+  grid-template-columns: minmax(0, 1fr) minmax(230px, 260px) minmax(0, 1fr);
+  column-gap: 0;
+  isolation: isolate;
+}
+.hero-redesign .hero-side-word {
+  z-index: 3;
+}
+.hero-redesign .hero-avatar-button {
+  width: min(100%, 260px);
+  height: 84%;
+  transform: translateX(58px) !important;
+}
+.hero-redesign .hero-avatar {
+  mix-blend-mode: multiply;
+}
+@media (max-width: 900px) {
+  .hero-redesign .hero-art {
+    width: min(100%, 820px);
+    grid-template-columns: minmax(0, 1fr) minmax(195px, 220px) minmax(0, 1fr);
+  }
+  .hero-redesign .hero-avatar-button {
+    width: 100%;
+    height: 82%;
+    transform: translateX(38px) !important;
+  }
+}
+@media (max-width: 650px) {
+  .hero-redesign .hero-art {
+    width: 100%;
+    grid-template-columns: minmax(0, .95fr) minmax(118px, .82fr) minmax(0, .95fr);
+    column-gap: 0;
+  }
+  .hero-redesign .hero-avatar-button {
+    width: 100%;
+    height: 78%;
+    transform: translateX(8px) !important;
+  }
+}
+@media (max-width: 390px) {
+  .hero-redesign .hero-art {
+    grid-template-columns: minmax(0, .92fr) minmax(110px, .78fr) minmax(0, .92fr);
+  }
+  .hero-redesign .hero-avatar-button {
+    height: 76%;
+    transform: translateX(5px) !important;
+  }
+}
