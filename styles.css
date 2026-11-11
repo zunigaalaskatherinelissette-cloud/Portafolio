@@ -3332,3 +3332,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
     transform: translateX(-8px) !important;
   }
 }
+
+
+/* Desktop only: bring the avatar a little left without affecting tablet or phone layouts. */
+@media (min-width: 901px) {
+  .hero-redesign .hero-avatar-button {
+    transform: translateX(calc(-50% + 45px)) !important;
+  }
+}
