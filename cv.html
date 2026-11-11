@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Currículum académico y tecnológico de Katherine Lissette Zuniga Alas.">
   <meta name="theme-color" content="#fbfaf8">
-  <title>CV | Katherine Lissette Zuniga Alas</title>
+  <title>CV / Resume | Katherine Lissette Zuniga Alas</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -31,6 +31,13 @@
     .project-list{padding-left:17px;margin:5px 0 0;font-size:12px}.project-list li{margin-bottom:5px}
     .references{display:grid;grid-template-columns:1fr 1fr;gap:16px}.reference{font-size:11px;border-left:2px solid var(--sand);padding-left:12px}.reference strong{font-size:12px}
     .cert-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.cert-card{border:1px solid var(--line);border-radius:12px;padding:15px;background:linear-gradient(145deg,#fff,#f8f6fc)}.cert-mark{display:inline-block;padding:4px 8px;border-radius:20px;background:var(--purple-light);color:var(--purple);font-size:9px;font-weight:800;letter-spacing:.7px}.cert-card h3{font:700 15px var(--font-display);margin:10px 0 4px;color:var(--ink)}.cert-card p{font-size:11px;color:var(--muted);margin:4px 0}.cert-code{font:600 10px monospace;color:var(--purple)!important;overflow-wrap:anywhere}.cert-link{display:inline-block;margin-top:8px;padding:8px 11px;border-radius:20px;background:var(--purple);color:#fff;font-size:10px;font-weight:700}.cert-link:hover{opacity:.85}.privacy-note{font-size:10px;color:var(--muted);margin-top:15px}
+    .lang-en{display:none}body[data-lang="en"] .lang-es{display:none}body[data-lang="en"] .lang-en{display:grid}
+    .language-switch{display:flex;gap:5px;padding:4px;background:#eeeaf6;border-radius:24px}
+    .language-switch button{border:0;background:transparent;padding:7px 11px;border-radius:20px;color:var(--purple);font:700 10px var(--font-body);cursor:pointer}
+    .language-switch button.active{background:var(--purple);color:white}
+    .toolbar-right{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+    @media(max-width:760px){.toolbar-right{width:100%;justify-content:space-between}}
+    @media print{.lang-en{display:none!important}body[data-lang="en"] .lang-en{display:grid!important}body[data-lang="en"] .lang-es{display:none!important}}
     @media(max-width:760px){.topbar{margin-top:12px}.resume{margin:0 10px 20px;grid-template-columns:1fr;min-height:0}.sidebar{padding:26px 25px}.main{padding:30px 25px}.portrait-wrap{width:145px;height:145px}.name,.surname{text-align:center}.name{font-size:40px}.surname{font-size:43px;margin-bottom:24px}.two-col{gap:8px 15px}}
     @media(max-width:420px){.topbar{align-items:flex-start;flex-direction:column}.actions{width:100%}.action{flex:1}.two-col,.references,.cert-grid{grid-template-columns:1fr}}
     @media print{body{background:white}.topbar{display:none}.resume{max-width:none;margin:0;box-shadow:none;min-height:0;grid-template-columns:34% 66%}.sidebar{padding:28px 24px}.main{padding:30px 34px}.portrait-wrap{width:145px;height:145px}.name{font-size:42px}.surname{font-size:45px}.section{margin-top:21px}.main-section{margin-bottom:20px}@page{size:A4;margin:0}}
@@ -39,12 +46,18 @@
 <body>
   <div class="topbar">
     <a class="back" href="index.html">← Volver al portafolio</a>
-    <div class="actions">
-      <button class="action" onclick="window.location.href='index.html'">Portafolio</button>
-      <button class="action primary" onclick="window.print()">Descargar / Imprimir CV ↗</button>
+    <div class="toolbar-right">
+      <div class="language-switch" aria-label="Choose language">
+        <button type="button" id="btn-es" class="active" onclick="setLanguage('es')">ES</button>
+        <button type="button" id="btn-en" onclick="setLanguage('en')">EN</button>
+      </div>
+      <div class="actions">
+        <button class="action" onclick="window.location.href='index.html'">Portafolio</button>
+        <button class="action primary" onclick="window.print()">Descargar / Imprimir CV ↗</button>
+      </div>
     </div>
   </div>
-  <main class="resume">
+  <main class="resume lang-es">
     <aside class="sidebar">
       <div class="portrait-wrap"><img src="assets/katherine-photo.webp" alt="Fotografía profesional de Katherine"></div>
       <div class="contact">
@@ -130,5 +143,94 @@
       <p class="privacy-note">Este CV público muestra únicamente canales de contacto profesionales. Los datos telefónicos y de ubicación personal, así como los números de terceros, se han omitido por privacidad.</p>
     </div>
   </main>
+  <main class="resume lang-en" lang="en">
+    <aside class="sidebar">
+      <div class="portrait-wrap"><img src="assets/katherine-photo.webp" alt="Professional portrait of Katherine"></div>
+      <div class="contact">
+        <a href="mailto:zunigaalaskatherinelissette@gmail.com"><b>✉</b><span>zunigaalaskatherinelissette@gmail.com</span></a>
+        <a href="https://www.linkedin.com/in/katherinezuniga13" target="_blank" rel="noopener noreferrer"><b>in</b><span>linkedin.com/in/katherinezuniga13</span></a>
+        <a href="https://github.com/zunigaalaskatherinelissette-cloud" target="_blank" rel="noopener noreferrer"><b>GH</b><span>github.com/zunigaalaskatherinelissette-cloud</span></a>
+      </div>
+      <section class="section">
+        <h2>About me</h2>
+        <p>High school student with a strong commitment to service, a sense of responsibility, and the ability to work effectively in a team. I am currently strengthening my skills in Excel, programming, and English, with the goal of growing professionally in the field of medicine.</p>
+      </section>
+      <section class="section">
+        <h2>Certifications & courses</h2>
+        <p><em>Completed through Centro ¡Supérate! ADOC</em></p>
+        <ul>
+          <li>Microsoft Office Specialist: Excel Associate — Microsoft 365 Apps | <span class="year">2025</span></li>
+          <li>Microsoft Office Specialist: Excel Expert — Microsoft 365 Apps | <span class="year">2026</span></li>
+          <li>TOEIC Listening and Reading | <span class="year">2025</span></li>
+          <li>Arduino and Basic Electronics Course | <span class="year">2025</span></li>
+          <li>Basic Personal Finance Course | <span class="year">2026</span></li>
+        </ul>
+      </section>
+      <section class="section">
+        <h2>Languages</h2>
+        <p>SPANISH — NATIVE</p>
+        <p style="margin-top:7px">ENGLISH — BASIC / INTERMEDIATE</p>
+      </section>
+    </aside>
+    <div class="main">
+      <h1 class="name">Katherine</h1><p class="surname">Zuniga</p>
+      <section class="main-section">
+        <h2>Education</h2>
+        <div class="entry"><div class="entry-title">Instituto Nacional San Luis | 2025 – Present</div><p>General High School Diploma</p></div>
+        <div class="entry"><div class="entry-title">¡Supérate! ADOC Business Program | 2024 – Present</div><p>Scholarship program focused on English, Computer Science, and Values.</p></div>
+        <div class="entry"><div class="entry-title">Centro Escolar Colonia Guayacán | 2015 – 2024</div><p>Basic Education</p></div>
+      </section>
+      <section class="main-section" id="excel-certifications">
+        <h2>Official Microsoft Excel Certifications</h2>
+        <div class="cert-grid">
+          <article class="cert-card">
+            <span class="cert-mark">MICROSOFT · 2025</span>
+            <h3>Excel Associate</h3>
+            <p>Microsoft 365 Apps</p>
+            <p>Certification date: November 4, 2025</p>
+            <p class="cert-code">Code: wawY9-H9Jm</p>
+            <a class="cert-link" href="https://www.certiport.com/Portal/Pages/CredentialVerification.aspx?code=wawY9-H9Jm" target="_blank" rel="noopener noreferrer">Verify certificate ↗</a>
+          </article>
+          <article class="cert-card">
+            <span class="cert-mark">MICROSOFT · 2026</span>
+            <h3>Excel Expert</h3>
+            <p>Microsoft 365 Apps</p>
+            <p>Certification date: March 25, 2026</p>
+            <p class="cert-code">Code: LV7B-s4Lm</p>
+            <a class="cert-link" href="https://www.certiport.com/Portal/Pages/CredentialVerification.aspx?code=LV7B-s4Lm" target="_blank" rel="noopener noreferrer">Verify certificate ↗</a>
+          </article>
+        </div>
+      </section>
+      <section class="main-section">
+        <h2>Soft skills</h2>
+        <div class="two-col">
+          <ul><li>Adaptability</li><li>Willingness to learn</li><li>Self-control</li><li>Active listening</li></ul>
+          <ul><li>Teamwork</li><li>Organization</li><li>Cooperation</li><li>Empathy</li><li>Assertive communication</li></ul>
+        </div>
+      </section>
+      <section class="main-section">
+        <h2>Technical skills</h2>
+        <ul class="project-list"><li>Basic Arduino skills</li><li>Microsoft Excel 2019</li><li>Basic/intermediate English</li><li>HTML, CSS, JavaScript, PHP, and MySQL in academic projects</li></ul>
+      </section>
+      <section class="main-section volunteer">
+        <h2>Volunteering</h2>
+        <div class="entry"><div class="entry-title">Plaza San Diego Cleanup Day | May 2025</div><p>Participated in a community cleanup, strengthening teamwork and commitment to the community.</p></div>
+        <div class="entry"><div class="entry-title">Visit to San Vicente de Paul Nursing Home | February 2026</div><p>Participated in recreational and social activities for older adults, promoting emotional well-being and inclusion through empathy and solidarity.</p><p class="note">Sponsored by ADOC VOLUNTEERS · Project leader: Anderson López</p></div>
+      </section>
+      <section class="main-section">
+        <h2>Projects</h2>
+        <div class="entry-title">SpeedyShop</div>
+        <ul class="project-list"><li>Contributed to the development of a website focused on agricultural markets.</li><li>Used HTML, CSS, JavaScript, MySQL, and PHP for the database.</li><li>Participated in the project's design, planning, development, and presentation.</li></ul>
+      </section>
+      <section class="main-section">
+        <h2>References</h2>
+        <p style="font-size:11px;color:#4e4a58">Academic references available upon request.</p>
+      </section>
+      <p class="privacy-note">This public résumé displays professional contact channels only. Personal phone numbers, location details, and third-party contact information have been omitted for privacy.</p>
+    </div>
+  </main>
+<script>
+function setLanguage(lang){document.body.dataset.lang=lang;document.documentElement.lang=lang;document.getElementById("btn-es").classList.toggle("active",lang==="es");document.getElementById("btn-en").classList.toggle("active",lang==="en");document.title=(lang==="es"?"CV":"Resume")+" | Katherine Lissette Zuniga Alas";}
+</script>
 </body>
 </html>
