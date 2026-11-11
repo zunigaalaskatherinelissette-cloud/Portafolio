@@ -101,3 +101,178 @@ document.querySelectorAll("[data-skill-card]").forEach((card) => {
     }
   });
 });
+
+
+// Bilingual portfolio: switch all visible copy between English and Spanish.
+(() => {
+  const translations = {
+    "Skip to content": "Saltar al contenido",
+    "Open navigation": "Abrir navegación",
+    "Close navigation": "Cerrar navegación",
+    "Home": "Inicio",
+    "About me": "Sobre mí",
+    "Projects": "Proyectos",
+    "Skills": "Habilidades",
+    "Contact": "Contacto",
+    "01 / WELCOME TO MY PORTFOLIO": "01 / BIENVENIDOS A MI PORTAFOLIO",
+    "High school student · Aspiring medical professional · Technology enthusiast": "Estudiante de bachillerato · Futura profesional de la medicina · Entusiasta de la tecnología",
+    "“I learn with curiosity, create with purpose, and turn ideas into solutions that can help others.”": "«Aprendo con curiosidad, creo con propósito y convierto ideas en soluciones que pueden ayudar a los demás».",
+    "Tap my avatar to say hello ✨": "Toca mi avatar para saludar ✨",
+    "Curiosity in mind. Creativity in progress.": "Curiosidad en mente. Creatividad en acción.",
+    "SCROLL TO EXPLORE": "DESLIZA PARA EXPLORAR",
+    "02 / ABOUT ME · GET TO KNOW ME": "02 / SOBRE MÍ · CONÓCEME",
+    "Who I ": "Quién ",
+    "am.": "soy.",
+    "Katherine Lissette Zuniga Alas · Student · Creative thinker · Future medical professional": "Katherine Lissette Zuniga Alas · Estudiante · Pensadora creativa · Futura profesional de la medicina",
+    "I’m Katherine Lissette Zuniga Alas, a high school student who describes herself as curious, responsible, creative, and eager to learn. I enjoy working with others, organizing ideas, and paying attention to details. I try to approach each challenge with patience, empathy, and the willingness to improve.": "Soy Katherine Lissette Zuniga Alas, estudiante de bachillerato. Me considero una persona curiosa, responsable, creativa y con muchas ganas de aprender. Disfruto trabajar con otras personas, organizar ideas y prestar atención a los detalles. Procuro afrontar cada desafío con paciencia, empatía y disposición para mejorar.",
+    "My interest in technology began with curiosity about how websites and digital tools are created and how they can make everyday tasks easier. Through school projects, I discovered that I enjoy combining creativity with logic: planning an idea, designing an experience, learning how the code works, and improving the result. Building projects has helped me turn that curiosity into practical experience with web development, databases, and digital tools.": "Mi interés por la tecnología nació de la curiosidad por saber cómo se crean los sitios web y las herramientas digitales, y cómo pueden facilitar las tareas cotidianas. A través de los proyectos escolares descubrí que disfruto combinar la creatividad con la lógica: planificar una idea, diseñar una experiencia, aprender cómo funciona el código y mejorar el resultado. Crear proyectos me ha permitido convertir esa curiosidad en experiencia práctica en desarrollo web, bases de datos y herramientas digitales.",
+    "What motivates me is the possibility of using what I learn to make a positive difference. I want to continue growing in technology while also preparing for a future in medicine, a field that connects knowledge with care and service. I believe that staying curious, working with purpose, and treating people with empathy will help me keep moving toward those goals.": "Me motiva la posibilidad de utilizar lo que aprendo para generar un impacto positivo. Quiero seguir creciendo en tecnología y, al mismo tiempo, prepararme para un futuro en la medicina, un campo que une el conocimiento con el cuidado y el servicio. Creo que mantener la curiosidad, trabajar con propósito y tratar a las personas con empatía me ayudará a avanzar hacia esas metas.",
+    "Technology": "Tecnología",
+    "Learning": "Aprendizaje",
+    "Medicine": "Medicina",
+    "Creativity": "Creatividad",
+    "LET’S CONNECT": "CONECTEMOS",
+    "LinkedIn profile": "Perfil de LinkedIn",
+    "GitHub profile": "Perfil de GitHub",
+    "Contact & links": "Contacto y enlaces",
+    "FIVE SECTIONS · ONE STORY": "CINCO SECCIONES · UNA HISTORIA",
+    "HOME": "INICIO",
+    "ABOUT ME": "SOBRE MÍ",
+    "PROJECTS": "PROYECTOS",
+    "SKILLS": "HABILIDADES",
+    "CONTACT": "CONTACTO",
+    "03 / PROJECTS": "03 / PROYECTOS",
+    "Ideas made ": "Ideas hechas ",
+    "real.": "realidad.",
+    "Three projects that reflect my curiosity, creativity, and growing technical skills.": "Tres proyectos que reflejan mi curiosidad, creatividad y el desarrollo de mis habilidades técnicas.",
+    "E-COMMERCE · JEWELRY": "COMERCIO ELECTRÓNICO · JOYERÍA",
+    "An elegant online jewelry store where visitors can explore collections, rings, necklaces, and earrings.": "Una elegante tienda de joyería en línea donde se pueden explorar colecciones, anillos, collares y aretes.",
+    "Explore case study": "Explorar proyecto",
+    "AI · EDUCATIONAL TECHNOLOGY": "IA · TECNOLOGÍA EDUCATIVA",
+    "A camera-based learning tool that recognizes objects and connects them with Spanish and English vocabulary.": "Una herramienta de aprendizaje con cámara que reconoce objetos y los relaciona con vocabulario en español e inglés.",
+    "Watch project demo": "Ver demostración",
+    "Visit live project": "Visitar proyecto",
+    "WEB DEVELOPMENT · E-COMMERCE": "DESARROLLO WEB · COMERCIO ELECTRÓNICO",
+    "A website focused on agromarkets, developed with a database and a web technology stack.": "Un sitio web enfocado en agromercados, desarrollado con una base de datos y distintas tecnologías web.",
+    "BEHIND THE SCREENS": "DETRÁS DE LAS PANTALLAS",
+    "Project stories": "Historias de los proyectos",
+    "A closer look at the purpose, work, and tools behind each project.": "Un vistazo más cercano al propósito, el trabajo y las herramientas detrás de cada proyecto.",
+    "Online jewelry storefront": "Tienda de joyería en línea",
+    "A jewelry-store concept designed to make collections easy to explore and products easy to discover.": "Un concepto de tienda de joyería diseñado para facilitar la exploración de colecciones y el descubrimiento de productos.",
+    "PROJECT CONTEXT": "CONTEXTO DEL PROYECTO",
+    "Organizes rings, necklaces, earrings, and collections in one welcoming online store.": "Organiza anillos, collares, aretes y colecciones en una tienda virtual fácil de explorar.",
+    "WHAT IT SHOWCASES": "LO QUE PRESENTA",
+    "Visual presentation, clear categories, and a simple browsing experience.": "Presentación visual, categorías claras y una experiencia de navegación sencilla.",
+    "TECHNICAL FOCUS": "ENFOQUE TÉCNICO",
+    "Front-end storefront design · product catalog · website navigation.": "Diseño de interfaz · catálogo de productos · navegación del sitio web.",
+    "Watch project demo ↗": "Ver demostración ↗",
+    "Team project · Language learning": "Proyecto en equipo · Aprendizaje de idiomas",
+    "A camera-based learning tool that identifies everyday objects and connects them with Spanish and English vocabulary.": "Una herramienta de aprendizaje con cámara que identifica objetos cotidianos y los relaciona con vocabulario en español e inglés.",
+    "Helps language learners connect real-world objects with new vocabulary.": "Ayuda a quienes aprenden idiomas a relacionar objetos reales con vocabulario nuevo.",
+    "MY CONTRIBUTION": "MI CONTRIBUCIÓN",
+    "Collaborated with my teammates on the website experience and project presentation.": "Colaboré con mis compañeros en la experiencia del sitio web y en la presentación del proyecto.",
+    "TECHNOLOGIES": "TECNOLOGÍAS",
+    "Teachable Machine · image recognition · camera integration · bilingual vocabulary · audio support.": "Teachable Machine · reconocimiento de imágenes · integración de cámara · vocabulario bilingüe · apoyo de audio.",
+    "Watch team demo ↗": "Ver demostración del equipo ↗",
+    "Visit live Linguavision ↗": "Visitar Linguavision ↗",
+    "Agromarket-focused website": "Sitio web para agromercados",
+    "A website concept that presents agromarket information, product categories, special offers, and listings in one place.": "Un sitio web que presenta información de agromercados, categorías de productos, ofertas especiales y listados en un solo lugar.",
+    "Participated in planning, design, development, and presentation.": "Participé en la planificación, el diseño, el desarrollo y la presentación.",
+    "HTML · CSS · JavaScript · PHP · MySQL.": "HTML · CSS · JavaScript · PHP · MySQL.",
+    "Watch website demo ↗": "Ver demostración del sitio ↗",
+    "Visit live website ↗": "Visitar sitio web ↗",
+    "04 / SKILLS": "04 / HABILIDADES",
+    "Skills & ": "Habilidades y ",
+    "strengths.": "fortalezas.",
+    "Tap a card to highlight that part of my toolkit.": "Toca una tarjeta para destacar esa área de mis habilidades.",
+    "Technical skills": "Habilidades técnicas",
+    "Practiced through my website projects, database work, spreadsheets, and introductory electronics activities.": "Desarrolladas mediante mis proyectos web, trabajo con bases de datos, hojas de cálculo y actividades introductorias de electrónica.",
+    "Personal strengths": "Fortalezas personales",
+    "Creative problem-solving": "Resolución creativa de problemas",
+    "Willingness to learn": "Disposición para aprender",
+    "Strengthened through collaborative school projects, presentations, and working toward shared goals.": "Fortalecidas mediante proyectos escolares colaborativos, presentaciones y trabajo para alcanzar objetivos compartidos.",
+    "Languages": "Idiomas",
+    "Native": "Nativo",
+    "Basic / Intermediate": "Básico / Intermedio",
+    "I keep practicing English to become more confident and clear when communicating.": "Sigo practicando inglés para comunicarme con mayor confianza y claridad.",
+    "05 / CONTACT": "05 / CONTACTO",
+    "Thank you for": "Gracias por",
+    "being ": "estar ",
+    "here.": "aquí.",
+    "I am always open to learning, sharing ideas, and discovering new opportunities.": "Siempre estoy dispuesta a aprender, compartir ideas y descubrir nuevas oportunidades.",
+    "Let’s connect": "Conectemos",
+    "“Dream big, keep learning, and make it happen.”": "«Sueña en grande, sigue aprendiendo y hazlo realidad».",
+    "BACK TO TOP ↑": "VOLVER ARRIBA ↑",
+    "Hi! Thanks for visiting my portfolio ♡": "¡Hola! Gracias por visitar mi portafolio ♡"
+  };
+
+  const originalText = new Map();
+  const header = document.querySelector(".site-header");
+  if (!header) return;
+
+  const switcher = document.createElement("button");
+  switcher.type = "button";
+  switcher.className = "language-toggle";
+  switcher.textContent = "ES";
+  switcher.setAttribute("aria-label", "Cambiar idioma a español");
+  switcher.setAttribute("title", "Español");
+  const headerMark = header.querySelector(".header-mark");
+  header.insertBefore(switcher, headerMark || null);
+
+  const style = document.createElement("style");
+  style.textContent = `
+    .language-toggle {
+      min-width: 42px; height: 36px; padding: 0 11px;
+      border: 1px solid #e6e1dc; border-radius: 22px;
+      background: #fff; color: #5643a2; cursor: pointer;
+      font: 800 11px "DM Sans", Arial, sans-serif;
+      letter-spacing: .6px; transition: background .2s ease, transform .2s ease;
+    }
+    .language-toggle:hover { background: #eee9fb; transform: translateY(-1px); }
+    .language-toggle:focus-visible { outline: 3px solid rgba(86,67,162,.3); outline-offset: 3px; }
+    @media (max-width: 650px) {
+      .site-header { gap: 10px; }
+      .language-toggle { min-width: 39px; height: 34px; padding: 0 9px; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+    acceptNode(node) {
+      if (!node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+      if (node.parentElement && ["SCRIPT", "STYLE", "VIDEO", "NOSCRIPT"].includes(node.parentElement.tagName)) return NodeFilter.FILTER_REJECT;
+      return NodeFilter.FILTER_ACCEPT;
+    }
+  });
+
+  const textNodes = [];
+  while (walker.nextNode()) {
+    const node = walker.currentNode;
+    textNodes.push(node);
+    originalText.set(node, node.nodeValue);
+  }
+
+  const applyLanguage = (language) => {
+    const spanish = language === "es";
+    textNodes.forEach((node) => {
+      const original = originalText.get(node);
+      const trimmed = original.trim();
+      const translated = translations[trimmed];
+      if (spanish && translated) {
+        const leading = original.match(/^\\s*/)?.[0] || "";
+        const trailing = original.match(/\\s*$/)?.[0] || "";
+        node.nodeValue = leading + translated + trailing;
+      } else {
+        node.nodeValue = original;
+      }
+    });
+    document.documentElement.lang = spanish ? "es" : "en";
+    switcher.textContent = spanish ? "EN" : "ES";
+    switcher.setAttribute("aria-label", spanish ? "Switch language to English" : "Cambiar idioma a español");
+    switcher.setAttribute("title", spanish ? "English" : "Español");
+  };
+
+  switcher.addEventListener("click", () => {
+    applyLanguage(document.documentElement.lang === "en" ? "es" : "en");
+  });
+})();
