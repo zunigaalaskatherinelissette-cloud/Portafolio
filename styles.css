@@ -3201,3 +3201,77 @@ button, a { -webkit-tap-highlight-color: transparent; }
     width: min(190px, 58vw) !important;
   }
 }
+
+
+/* Refined compact hero: tighter word/avatar grouping and a clear break before About. */
+@media (min-width: 651px) {
+  .hero-redesign .hero-art {
+    width: min(100%, 1160px) !important;
+    height: clamp(300px, 39vh, 380px) !important;
+    min-height: 300px !important;
+    max-height: 380px !important;
+    margin-inline: auto !important;
+  }
+  .hero-redesign .hero-word-left {
+    left: 3.5% !important;
+    top: 19% !important;
+    font-size: clamp(94px, 11.4vw, 168px) !important;
+  }
+  .hero-redesign .hero-word-right {
+    right: 4% !important;
+    bottom: 13% !important;
+    font-size: clamp(80px, 10vw, 148px) !important;
+  }
+  .hero-redesign .hero-avatar-button {
+    width: clamp(220px, 21vw, 270px) !important;
+    height: 84% !important;
+    bottom: 20px !important;
+    transform: translateX(calc(-50% + 75px)) !important;
+  }
+  .hero-redesign .hero-tagline {
+    width: min(100%, 820px) !important;
+    margin: 0 auto 26px !important;
+    padding: 8px 20px 18px !important;
+  }
+  .hero-redesign .hero-bottomline {
+    margin-top: 0 !important;
+    padding-top: 12px !important;
+  }
+  .hero-redesign {
+    padding-bottom: 30px !important;
+  }
+}
+@media (min-width: 651px) and (max-width: 900px) {
+  .hero-redesign .hero-art {
+    height: clamp(310px, 40vh, 360px) !important;
+    min-height: 310px !important;
+  }
+  .hero-redesign .hero-word-left {
+    left: 2% !important;
+    font-size: clamp(78px, 10.5vw, 108px) !important;
+  }
+  .hero-redesign .hero-word-right {
+    right: 2% !important;
+    font-size: clamp(68px, 9.4vw, 96px) !important;
+  }
+  .hero-redesign .hero-avatar-button {
+    width: min(27vw, 235px) !important;
+    transform: translateX(calc(-50% + 58px)) !important;
+  }
+}
+@media (max-width: 650px) {
+  .hero-redesign .hero-art {
+    margin-bottom: 12px !important;
+  }
+  .hero-redesign .hero-tagline {
+    margin: 10px auto 24px !important;
+    padding-bottom: 14px !important;
+  }
+  .hero-redesign .hero-bottomline {
+    margin-top: 0 !important;
+    padding-top: 12px !important;
+  }
+  .hero-redesign {
+    padding-bottom: 26px !important;
+  }
+}
