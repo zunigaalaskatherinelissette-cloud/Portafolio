@@ -1565,3 +1565,24 @@ img, video, svg, canvas {
 .cv-button:hover { color: #fff; background: var(--purple); transform: translateY(-2px); }
 .cv-button:focus-visible { outline: 3px solid rgba(86,67,162,.25); outline-offset: 3px; }
 @media (max-width: 650px) { .cv-button { margin-top: 16px; } }
+
+
+/* Standalone certifications section — displayed as its own portfolio chapter. */
+.certifications-section{padding:54px 0 62px}
+.certifications-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.portfolio-cert-card{min-width:0;padding:22px 21px;border:1px solid #ebe5e1;border-radius:18px;background:rgba(255,255,255,.82);box-shadow:0 7px 22px rgba(62,48,72,.035);transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+.portfolio-cert-card:hover{transform:translateY(-4px);border-color:#d7c9e9;box-shadow:0 13px 28px rgba(64,48,92,.08)}
+.portfolio-cert-card.featured-cert{background:linear-gradient(145deg,#f7f3fc,#fff 78%);border-color:#e2d8ef}
+.portfolio-cert-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.cert-provider{font-size:9px;font-weight:800;letter-spacing:1px;color:#78669b}
+.cert-seal{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#eee9f6;color:#625184;font:700 11px var(--font-display)}
+.cert-category{margin:19px 0 6px;color:#9a8d9d;font-size:9px;font-weight:800;letter-spacing:1px}
+.portfolio-cert-card h3{margin:0 0 9px;color:#302b37;font:600 20px/1.25 var(--font-display);letter-spacing:-.035em}
+.cert-description{min-height:48px;margin:0;color:#68616d;font-size:12px;line-height:1.75}
+.cert-date{margin:12px 0 0;color:#81758b;font-size:10px;font-weight:700}
+.cert-verify{display:inline-flex;margin-top:15px;padding:9px 13px;border-radius:22px;background:#5643a2;color:white;font-size:10px;font-weight:800}
+.cert-verify:hover{background:#40327d}
+.certifications-note{margin:20px 0 0;color:#84798b;font-size:11px;line-height:1.7;font-style:italic}
+@media(max-width:850px){.certifications-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.certifications-section{padding:36px 0 42px}.certifications-grid{grid-template-columns:minmax(0,1fr);gap:13px}.portfolio-cert-card{padding:19px 18px}.cert-description{min-height:0}}
+@media(prefers-reduced-motion:reduce){.portfolio-cert-card{transition:none}}
